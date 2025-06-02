@@ -1,18 +1,18 @@
-import '../styles/Pagination.css';
+import styles from '../styles/Pagination.module.css';
 
 const Pagination = () => (
-    <div className="pagination-container">
-        <div className="pagination-controls">
-            <button className="pagination-btn">&lt;</button>
+    <div className={styles['pagination-container']}>
+        <div className={styles['pagination-controls']}>
+            <button className={styles['pagination-btn']}>&lt;</button>
             <span>Page</span>
             <input
                 type="text"
                 value="1"
-                className="pagination-input"
+                className={styles['pagination-input']}
                 readOnly
             />
             <span>of 14</span>
-            <button className="pagination-btn">&gt;</button>
+            <button className={styles['pagination-btn']}>&gt;</button>
         </div>
     </div>
 );

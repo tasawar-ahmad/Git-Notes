@@ -1,4 +1,4 @@
-import '../styles/GistTable.css';
+import styles from '../styles/GistTable.module.css';
 import GistRow from './GistRow';
 
 const dummyUsers = Array(9).fill({
@@ -8,14 +8,14 @@ const dummyUsers = Array(9).fill({
 
 const GistTable = () => (
   <div>
-    <table className="gist-table">
-      <thead className="gist-table-head">
+    <table className={styles['gist-table']}>
+      <thead className={styles['gist-table-head']}>
         <tr>
-          <th className="gist-th">Name</th>
-          <th className="gist-th">Notebook Name</th>
-          <th className="gist-th">Keyword</th>
-          <th className="gist-th">Updated</th>
-          <th className="gist-th">Actions</th>
+          <th className={styles['gist-th']}>Name</th>
+          <th className={styles['gist-th']}>Notebook Name</th>
+          <th className={styles['gist-th']}>Keyword</th>
+          <th className={styles['gist-th']}>Updated</th>
+          <th className={styles['gist-th']}>Actions</th>
         </tr>
       </thead>
       <tbody>
