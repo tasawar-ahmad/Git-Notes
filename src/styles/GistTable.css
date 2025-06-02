@@ -1,0 +1,13 @@
+    .gist-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .gist-table-head {
+    background-color: #f5f5f5;
+  }
+  
+  .gist-th {
+    padding: 0.75rem;
+  }

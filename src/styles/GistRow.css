@@ -1,0 +1,29 @@
+.gist-row {
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .gist-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .gist-cell {
+    padding: 0.75rem;
+  }
+  
+  .keyword-pill {
+    background-color: #134e4a;
+    color: white;
+    border-radius: 10px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
