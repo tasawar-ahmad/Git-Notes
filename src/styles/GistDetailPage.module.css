@@ -1,0 +1,95 @@
+.gist-detail-wrapper {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.gist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.gist-user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.user-info p {
+  margin: 4px 0;
+}
+
+.gist-name {
+  color: #0366d6;
+}
+
+.meta {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.description {
+  font-size: 0.95em;
+  color: #444;
+}
+
+.gist-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid #003b46;
+  background-color: #003b46;
+  color: #fff;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn .count {
+  background: #fff;
+  color: #003b46;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.file-container {
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f6f8fa;
+}
+
+.file-header {
+  background-color: #f0f0f0;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #d1d5da;
+}
+
+.code-block {
+  margin: 0;
+  padding: 16px;
+  background-color: #f6f8fa;
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}

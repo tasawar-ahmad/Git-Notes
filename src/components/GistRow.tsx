@@ -1,4 +1,5 @@
 import { formatDistanceToNow } from 'date-fns';
+import { useNavigate } from 'react-router-dom';
 import styles from '../styles/GistRow.module.css';
 import type { Gist } from '../hooks/useGists';
 
@@ -7,10 +8,16 @@ interface Props {
 }
 
 const GistRow = ({ gist }: Props) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/gists/${gist.id}`);
+  };
+
   const fileNames = Object.keys(gist.files);
   const firstFile = gist.files[fileNames[0]];
   return (
-    <tr className={styles['gist-row']}>
+    <tr className={styles['gist-row']} onClick={handleClick}>
       <td className={styles['gist-user']}>
         <img src={gist.owner.avatar_url} alt="avatar" className={styles['avatar']} />
         <span>{gist.owner.login}</span>

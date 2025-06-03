@@ -1,5 +1,6 @@
-import styles from '../styles/GistCard.module.css';
 import { formatDistanceToNow } from 'date-fns';
+import { useNavigate } from 'react-router-dom';
+import styles from '../styles/GistCard.module.css';
 import type { Gist } from '../hooks/useGists';
 
 interface Props {
@@ -7,10 +8,15 @@ interface Props {
 }
 
 const GistCard = ({ gist }: Props) => {
+    const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/gists/${gist.id}`);
+  };
   const firstFile = Object.values(gist.files)[0];
 
   return (
-    <div className={styles['gist-card']}>
+    <div className={styles['gist-card']} onClick={handleClick}>
       <pre className={styles['gist-snippet']}>
         {JSON.stringify(firstFile, null, 2)}
       </pre>
