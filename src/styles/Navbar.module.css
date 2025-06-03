@@ -1,33 +1,88 @@
 .navbar {
-    background-color: #003B44;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00333c;
+  color: white;
+  padding: 12px 20px;
+}
 
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .search-login {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .search-input {
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-  }
-  
-  .login-button {
-    background-color: white;
-    color: #134e4a;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.search-input {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width: 220px;
+}
+
+.login-button {
+  background-color: #005f73;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  background-color: white;
+  color: black;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-header {
+  padding: 10px;
+  background-color: #f5f5f5;
+  font-size: 14px;
+}
+
+.dropdown a,
+.dropdown button {
+  display: block;
+  padding: 10px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background-color: #f0f0f0;
+}
