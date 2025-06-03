@@ -1,11 +1,12 @@
 import styles from '../styles/GistTable.module.css';
 import { useGists } from '../hooks/useGists';
 import GistRow from './GistRow';
+import GistLoader from './GistLoader';
 
 const GistTable = () => {
   const { gists, loading, error } = useGists();
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <GistLoader type="table" />;
   if (error) return <p>Error: {error}</p>;
   return (
     <div>

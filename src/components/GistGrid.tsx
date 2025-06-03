@@ -1,11 +1,12 @@
 import GistCard from './GistCard';
 import styles from '../styles/GistGrid.module.css';
 import { useGists } from '../hooks/useGists';
+import GistLoader from './GistLoader';
 
 const GistGrid = () => {
   const { gists, loading, error } = useGists();
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <GistLoader type="grid" />;
   if (error) return <p>Error loading gists</p>;
 
   return (
