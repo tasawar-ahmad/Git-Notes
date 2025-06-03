@@ -1,0 +1,33 @@
+.gist-card {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gist-snippet {
+    background: #f0f0f0;
+    padding: 8px;
+    overflow-x: auto;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 120px;
+  }
+  
+  .gist-footer {
+    display: flex;
+    margin-top: 12px;
+    gap: 10px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .desc {
+    color: #666;
+    margin: 4px 0;
+  }
+  
