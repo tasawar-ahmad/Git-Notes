@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Navbar.module.css';
 import { useAuth } from '../contexts/authContext';
 
 const Navbar= () => {
+  const navigate = useNavigate();
   const { user, login, logout } = useAuth();
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -56,9 +58,9 @@ const Navbar= () => {
                 <a href="https://gist.github.com/starred" target="_blank" rel="noreferrer">
                   Starred gists
                 </a>
-                <a href={user.html_url} target="_blank" rel="noreferrer">
+                <div onClick={() => navigate(`/user/${user.login}`)}>
                   Your GitHub profile
-                </a>
+                </div>
                 <a href="https://docs.github.com" target="_blank" rel="noreferrer">
                   Help
                 </a>

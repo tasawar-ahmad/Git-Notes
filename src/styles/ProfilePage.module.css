@@ -1,0 +1,96 @@
+.profile-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .btn {
+    background-color: #005f63;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+  
+  .gists-section {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .gists-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .gist-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: #fefefe;
+    border-radius: 8px;
+  }
+  
+  .code-snippet {
+    background-color: #f4f4f4;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+  }
+  
+  .gist-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .gist-meta img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .meta-sub {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .gist-desc {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #444;
+  }
+  
+  .gist-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .gist-actions button {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .info {
+    font-size: 14px;
+    color: #888;
+  }
+  
