@@ -1,18 +1,28 @@
+import { formatDistanceToNow } from 'date-fns';
 import styles from '../styles/GistRow.module.css';
+import type { Gist } from '../hooks/useGists';
 
-const GistRow = ({ user }) => (
-  <tr className={styles['gist-row']}>
-    <td className={styles['gist-user']}>
-      <img src={user.avatar} alt="avatar" className={styles['avatar']} />
-      <span>{user.name}</span>
-    </td>
-    <td className={styles['gist-cell']}>Notebook Name</td>
-    <td className={styles['gist-cell']}>
-      <span className={styles['keyword-pill']}>Keyword</span>
-    </td>
-    <td className={styles['gist-cell']}>Last updated a few hours ago</td>
+interface Props {
+  gist: Gist;
+}
 
-  </tr>
-);
+const GistRow = ({ gist }: Props) => {
+  const fileNames = Object.keys(gist.files);
+  const firstFile = gist.files[fileNames[0]];
+  return (
+    <tr className={styles['gist-row']}>
+      <td className={styles['gist-user']}>
+        <img src={gist.owner.avatar_url} alt="avatar" className={styles['avatar']} />
+        <span>{gist.owner.login}</span>
+      </td>
+      <td className={styles['gist-cell']}>{firstFile.filename}</td>
+      <td className={styles['gist-cell']}>
+        <span className={styles['keyword-pill']}>{firstFile.language || 'N/A'}</span>
+      </td>
+      <td className={styles['gist-cell']}>{formatDistanceToNow(new Date(gist.updated_at), { addSuffix: true })}</td>
+
+    </tr>
+  );
+};
 
 export default GistRow;
