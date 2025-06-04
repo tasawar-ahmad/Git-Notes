@@ -1,6 +1,7 @@
 import styles from '../styles/ProfilePage.module.css';
 import { useAuth } from '../contexts/authContext'; 
 import { useGists } from '../hooks/useGists';
+import Navbar from '../components/Navbar';
 
 export default function UserProfilePage() {
     const { user } = useAuth();
@@ -11,7 +12,9 @@ export default function UserProfilePage() {
     }
   
     return (
-      <div className={styles['profile-container']}>
+        <div>
+            <Navbar />
+            <div className={styles['profile-container']}>
         <div className={styles['sidebar']}>
           <img className={styles['avatar']} src={user.avatar_url} alt="User Avatar" />
           <h3>{user.name || user.login}</h3>
@@ -46,12 +49,13 @@ export default function UserProfilePage() {
                 <div className={styles['gist-actions']}>
                   <button>🔱 Fork</button>
                   <button>⭐ Star</button>
-                  <span>123</span>
                 </div>
               </div>
             ))}
         </div>
       </div>
+
+    </div>
     );
   }
   

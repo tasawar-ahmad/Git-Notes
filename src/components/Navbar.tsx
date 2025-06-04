@@ -24,6 +24,10 @@ const Navbar= () => {
     const token = import.meta.env.VITE_GITHUB_TOKEN;
     if (token) login(token);
   };
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  }
 
   return (
     <header className={styles['navbar']}>
@@ -65,7 +69,7 @@ const Navbar= () => {
                   Help
                 </a>
                 <div onClick={() => navigate('/create')}>Create Gist</div>
-                <button onClick={logout}>Sign out</button>
+                <button onClick={handleLogout}>Sign out</button>
               </div>
             )}
           </div>

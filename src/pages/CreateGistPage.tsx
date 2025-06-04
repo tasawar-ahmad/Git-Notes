@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/authContext';
 import styles from '../styles/CreateGistPage.module.css';
 
 type FileInput = {
@@ -7,6 +9,8 @@ type FileInput = {
 };
 
 export default function CreateGistPage() {
+    const navigate = useNavigate();
+    const { user } = useAuth();
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<FileInput[]>([{ filename: '', content: '' }]);
 
@@ -50,8 +54,7 @@ export default function CreateGistPage() {
       console.error('Error creating gist:', errorData);
       return;
     }
-  
-    await response.json();
+    navigate(`/user/${user?.login}`)
   };
 
   return (
