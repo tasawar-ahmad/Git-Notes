@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import styles from '../styles/HomePage.module.css'
-import Navbar from '../components/Navbar';
-import GistGrid from '../components/GistGrid';
-import GistTable from '../components/GistTable';
-import Pagination from '../components/Pagination';
+import styles from './HomePage.module.css'
+import Navbar from '../../components/Navbar/Navbar';
+import GistGrid from '../../components/GistGrid/GistGrid';
+import GistTable from '../../components/GistTable/GistTable';
+import Pagination from '../../components/Pagination/Pagination';
 
 const HomePage = () => {
   const [currentPage, setCurrentPage] = useState(1);

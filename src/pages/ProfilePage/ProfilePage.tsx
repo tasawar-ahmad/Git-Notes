@@ -1,7 +1,7 @@
-import styles from '../styles/ProfilePage.module.css';
-import { useAuth } from '../contexts/authContext'; 
-import { useGists } from '../hooks/useGists';
-import Navbar from '../components/Navbar';
+import styles from './ProfilePage.module.css';
+import { useAuth } from '../../contexts/authContext'; 
+import { useGists } from '../../hooks/useGists';
+import Navbar from '../../components/Navbar/Navbar';
 
 export default function UserProfilePage() {
     const { user } = useAuth();

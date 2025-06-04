@@ -1,7 +1,7 @@
-import GistCard from './GistCard';
-import styles from '../styles/GistGrid.module.css';
-import { useGists } from '../hooks/useGists';
-import GistLoader from './GistLoader';
+import GistCard from '../GistCard/GistCard';
+import styles from './GistGrid.module.css';
+import { useGists } from '../../hooks/useGists';
+import GistLoader from '../GistLoader/GistLoader';
 
 const GistGrid = ({currentPage}: {currentPage: number}) => {
   const { gists, loading, error } = useGists(true, currentPage);

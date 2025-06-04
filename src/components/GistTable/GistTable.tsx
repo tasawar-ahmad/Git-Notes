@@ -1,7 +1,7 @@
-import styles from '../styles/GistTable.module.css';
-import { useGists } from '../hooks/useGists';
-import GistRow from './GistRow';
-import GistLoader from './GistLoader';
+import styles from './GistTable.module.css';
+import { useGists } from '../../hooks/useGists';
+import GistRow from '../GistRow/GistRow';
+import GistLoader from '../GistLoader/GistLoader';
 
 const GistTable = ({currentPage}: {currentPage: number}) => {
   const { gists, loading, error } = useGists(true, currentPage, 8);

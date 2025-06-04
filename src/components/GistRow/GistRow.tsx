@@ -1,7 +1,7 @@
 import { formatDistanceToNow } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
-import styles from '../styles/GistRow.module.css';
-import type { Gist } from '../hooks/useGists';
+import styles from './GistRow.module.css';
+import type { Gist } from '../../hooks/useGists';
 
 interface Props {
   gist: Gist;

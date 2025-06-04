@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
-import { useGistDetail } from '../hooks/useGistDetail';
-import styles from '../styles/GistDetailPage.module.css';
-import Navbar from '../components/Navbar';
+import { useGistDetail } from '../../hooks/useGistDetail';
+import styles from './GistDetailPage.module.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 const GistDetailPage = () => {
   const { id } = useParams();

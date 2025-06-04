@@ -1,4 +1,4 @@
-import styles from '../styles/GistLoader.module.css';
+import styles from './GistLoader.module.css';
 
 type Props = {
   type: 'table' | 'grid';
