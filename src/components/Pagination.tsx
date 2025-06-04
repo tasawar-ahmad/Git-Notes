@@ -2,10 +2,9 @@ import styles from '../styles/Pagination.module.css';
 
 interface Props {
     currentPage: number;
-    totalPages: number;
     onPageChange: (page: number) => void;
 }
-const Pagination = ({ currentPage, totalPages, onPageChange }: Props) => (
+const Pagination = ({ currentPage, onPageChange }: Props) => (
     <div className={styles['pagination-container']}>
         <div className={styles['pagination-controls']}>
             <button 
@@ -20,11 +19,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: Props) => (
                 className={styles['pagination-input']}
                 readOnly
             />
-            <span>of {totalPages}</span>
             <button 
                 className={styles['pagination-btn']}
                 onClick={() => onPageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
+                disabled={currentPage === 100}
             >&gt;</button>
         </div>
     </div>

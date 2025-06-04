@@ -3,9 +3,17 @@ import styles from '../styles/HomePage.module.css'
 import Navbar from '../components/Navbar';
 import GistGrid from '../components/GistGrid';
 import GistTable from '../components/GistTable';
+import Pagination from '../components/Pagination';
 
 const HomePage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const [view, setView] = useState<'card' | 'table'>('card');
+
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= 100) {
+      setCurrentPage(page);
+    }
+  };
 
   const handleToggle = (mode: 'card' | 'table') => {
     setView(mode);
@@ -34,10 +42,14 @@ const HomePage = () => {
         </div>
         </div>
         {view === 'table' ? (
-        <GistTable />
+        <GistTable currentPage= {currentPage}/>
       ) : (
-        <GistGrid />
+        <GistGrid currentPage={currentPage}/>
       )}
+       <Pagination
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+        />
     </main>
   </div>
 )};

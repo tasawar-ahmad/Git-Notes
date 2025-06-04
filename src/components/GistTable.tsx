@@ -1,19 +1,10 @@
-import { useState } from 'react';
 import styles from '../styles/GistTable.module.css';
 import { useGists } from '../hooks/useGists';
 import GistRow from './GistRow';
 import GistLoader from './GistLoader';
-import Pagination from './Pagination';
 
-const GistTable = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const { gists, loading, error, totalPages } = useGists(true, currentPage, 8);
-
-  const handlePageChange = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-    }
-  };
+const GistTable = ({currentPage}: {currentPage: number}) => {
+  const { gists, loading, error } = useGists(true, currentPage, 8);
 
   if (loading) return <GistLoader type="table" />;
   if (error) return <p>Error: {error}</p>;
@@ -35,11 +26,7 @@ const GistTable = () => {
           ))}
         </tbody>
       </table>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-        />
+     
     </div>
   );
 };
