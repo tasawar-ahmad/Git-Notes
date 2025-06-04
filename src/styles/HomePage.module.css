@@ -2,3 +2,25 @@
     max-width: 1500px;
     margin: 1rem auto;
 }
+.gist-view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .view-toggle {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .toggle-btn {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .toggle-btn.active {
+    background-color: #004d4d;
+    color: white;
+  }

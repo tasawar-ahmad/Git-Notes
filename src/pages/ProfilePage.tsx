@@ -4,7 +4,7 @@ import { useGists } from '../hooks/useGists';
 
 export default function UserProfilePage() {
     const { user } = useAuth();
-    const { gists, loading, error } = useGists();
+    const { gists, loading, error } = useGists(false);
   
     if (!user) {
       return <p className={styles['info-msg']}>Please log in to view your profile and gists.</p>;
@@ -31,7 +31,7 @@ export default function UserProfilePage() {
             .map((gist) => (
               <div className={styles['gist-card']} key={gist.id}>
                 <pre className={styles['code-snippet']}>
-  {JSON.stringify(Object.values(gist.files)[0], null, 2)}
+  {Object.values(gist.files)[0].content}
                 </pre>
                 <div className={styles['gist-meta']}>
                   <img src={gist.owner.avatar_url} alt="avatar" />

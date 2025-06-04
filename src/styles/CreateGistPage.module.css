@@ -1,0 +1,72 @@
+.create-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .description-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .file-block {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .file-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filename-input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .delete-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .file-content {
+    width: 100%;
+    padding: 10px;
+    font-family: monospace;
+    margin-top: 10px;
+    resize: vertical;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .add-file-btn,
+  .create-btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .add-file-btn {
+    background-color: #f0f0f0;
+  }
+  
+  .create-btn {
+    background-color: #004c4c;
+    color: white;
+  }
+  

@@ -64,6 +64,7 @@ const Navbar= () => {
                 <a href="https://docs.github.com" target="_blank" rel="noreferrer">
                   Help
                 </a>
+                <div onClick={() => navigate('/create')}>Create Gist</div>
                 <button onClick={logout}>Sign out</button>
               </div>
             )}

@@ -18,7 +18,7 @@ const GistCard = ({ gist }: Props) => {
   return (
     <div className={styles['gist-card']} onClick={handleClick}>
       <pre className={styles['gist-snippet']}>
-        {JSON.stringify(firstFile, null, 2)}
+        {firstFile.content}
       </pre>
       <div className={styles['gist-footer']}>
         <img src={gist.owner.avatar_url} alt="avatar" className={styles['avatar']} />
